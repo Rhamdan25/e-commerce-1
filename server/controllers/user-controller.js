@@ -10,7 +10,7 @@ class UserController{
             username: req.body.username,
             email: req.body.email,
             password: req.body.password,
-            admin: true
+            admin: false
         })
         return newUser.save()
         .then(created =>{
