@@ -1,7 +1,7 @@
 const User = require("../models/user")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
-const secret =  "RAHASIA"
+const secret =  process.env.SECRET_KEY_TOKEN
 
 class UserController{
 
