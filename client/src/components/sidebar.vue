@@ -5,8 +5,8 @@
             <b-menu-item icon="account" label="My Account">
             </b-menu-item> -->
         </b-menu-list>
-        <b-menu-list>
-            <b-menu-item @click.prevent="logout()" label="Logout"></b-menu-item>
+        <b-menu-list v-if="$store.state.loggedUser">
+            <b-menu-item @click.prevent="logout()" label="Logout" icon="logout"></b-menu-item>
         </b-menu-list>
     </b-menu>
 </template>

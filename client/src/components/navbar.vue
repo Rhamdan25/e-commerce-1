@@ -1,8 +1,8 @@
 <template>
-    <b-navbar>
+    <b-navbar fixed-top type="is-black">
         <template slot="brand">
             <b-navbar-item>
-                <router-link to="/"> E-Commerce</router-link>
+                <router-link to="/"> <i class="fas fa-theater-masks" style="color:blue;"> Thea-Store</i></router-link>
             </b-navbar-item>
         </template>
         <template slot="start">

@@ -2,7 +2,7 @@
   <b-tabs type="is-boxed" @input="changeToHistory">    
       <b-loading :is-full-page="isFullPage" :active.sync="loading" :can-cancel="false"></b-loading>
             <b-tab-item class="columns is-multiline " label="Your Cart" icon="cart">
-                <b-button @click.prevent="checkout()" class="level-right" type="is-danger"><i class="fas fa-sign-out-alt"> Checkout</i>  </b-button>
+                <b-button  v-if="cart.length > 0" @click.prevent="checkout()" class="level-right" type="is-danger"><i class="fas fa-sign-out-alt"> Checkout</i>  </b-button>
                     <cartCard
                     v-for="cart in cart"
                     :key="cart._id"

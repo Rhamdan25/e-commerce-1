@@ -100,7 +100,12 @@ export default {
         products(){
             return this.$store.state.products
         }
-    }
+    },
+    // beforeRouteEnter (to, from, next) {
+    //     next(vm => {
+    //         // access to component instance via `vm`
+    //     })
+    // }
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="card" >
+  <div class="card">
     <div @click.prevent="details()"  >
       <div class="card-image">
         <figure class="image is-4by3">
@@ -16,7 +16,7 @@
 
     </div>
 
-      <footer class="card-footer">
+      <footer class="card-footer" >
         <p>{{product.show}}</p>
       </footer>
       
@@ -75,6 +75,7 @@ export default {
 <style>
     .card:hover{
     transform: scale(1.05) ;
-    z-index:10
+    z-index:10;
+    box-shadow: 0px 0px 5px cyan;
   }
 </style>

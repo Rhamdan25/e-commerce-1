@@ -1,16 +1,16 @@
 <template>
 <div>
-  <!-- <div class="panel-block">
-    <p class="control has-icons-left">
-      <input class="input is-small" type="text" placeholder="search">
+  <div class="panel-block">
+    <p id="search" class="control has-icons-left">
+      <input v-model="search" class="input is-small" type="text" placeholder="search">
       <span class="icon is-small is-left">
         <i class="fas fa-search" aria-hidden="true"></i>
       </span>
     </p>
-  </div> -->
+  </div>
   <b-tabs type="is-boxed">    
-    <b-tab-item label="All Products" icon="star">
-        <div class="columns is-multiline">
+    <b-tab-item  label="All Products" icon="star">
+        <div id="list" class="columns is-multiline">
           <card 
           class="column is-one-quarter"
           v-for="product in products"
@@ -42,17 +42,29 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
+  data(){
+    return{
+      search: ''
+    }
+  },
   components: {
-    card
+    card,
   },
   computed:{
     products(){
-      return this.$store.state.products
+      return this.$store.state.products.filter(product=>{
+        return product.title.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   }
 }
 </script>
 
 <style scoped>
-  
+  #search{
+    box-shadow: 0px 0px 5px black;
+  }
+  #list{
+    background-color:lightgray
+  }
 </style>

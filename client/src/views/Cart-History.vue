@@ -1,6 +1,6 @@
 <template>
   <b-tabs type="is-boxed" @input="changeToList">    
-            <b-tab-item class="columns is-multiline " label="History" icon="history">
+            <b-tab-item class="columns is-multiline " label="Transaction History" icon="history">
                     <historyCard
                     v-for="cart in cart"
                     :key="cart._id"

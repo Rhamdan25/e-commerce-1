@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://35.226.193.153',
     loggedUser: '',
     products:[],
     usersCart: [],
